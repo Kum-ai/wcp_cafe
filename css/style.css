@@ -1,0 +1,447 @@
+@chaset "UTF-8";
+
+/* 共通部分
+------------------------------- */
+html {
+  font-size: 100%;
+}
+body {
+  font-family:
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+  line-height: 1.7;
+  color: #432;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* レイアウト */
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.5rem; /* 左右の余白 */
+}
+
+.align-center {
+  text-align: center;
+}
+
+/* ヘッダー */
+.page-header {
+  padding-top: 0.5rem;
+}
+
+/* 共通のスタイルはまとめよう ｈ2とh3のところ*/
+.page-title,
+.heading-large,
+.heading-medium {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.page-title {
+  margin-top: 2rem;
+  line-height: 1.4;
+}
+
+.heading-large {
+  margin-bottom: 1rem;
+}
+
+.main-nav a {
+  color: #432;
+}
+
+.main-nav a:hover {
+  color: #0bd;
+}
+
+/* HOME
+------------------------------- */
+.cover-home {
+  background-image: url(../images/cover-home-l.webp);
+  /* ページ上部の画像を変更 */
+}
+
+.about {
+  max-width: 736px;
+  padding: 0 1.5rem;
+  margin: 3rem auto 0;
+}
+.about p {
+  margin-bottom: 3rem;
+}
+
+/* news
+--------------------------*/
+.cover-news {
+  background-image: url(../images/cover-news-s.webp);
+}
+/* 記事部分 */
+.post {
+  margin-bottom: 3rem;
+}
+
+.post-title {
+  font-weight: normal;
+  margin-bottom: 1.25rem;
+}
+
+.post-info {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.post-cat {
+  display: flex;
+  gap: none;
+  list-style: none;
+}
+.post-cat a {
+  color: #432;
+  background-color: #faf7f0;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+}
+.post-cat a:hover {
+  background-color: #c9c2bc;
+}
+.post-date {
+  font-size: 0.875rem;
+}
+.post-thumbail {
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.post p {
+  margin-bottom: 1.5rem;
+  line-height: 2;
+}
+
+/* menu
+--------------------------*/
+.cover-menu {
+  background-image: url(../images/cover-menu-s.webp);
+}
+.grid {
+  display: grid;
+  gap: 2rem 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+.item img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.item p {
+  text-align: center;
+}
+
+/* サイドバー */
+.side-menu {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.side-menu li {
+  border-bottom: 1px solid #c9c2bc;
+}
+.side-menu a {
+  color: #432;
+  display: block;
+  padding: 1rem;
+}
+.side-menu a:hover {
+  color: #0bd;
+}
+
+.logo {
+  width: 210px;
+}
+/* ナビゲーション */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+/* 見出し */
+.font-english {
+  font-family: "Philosopher", sans-serif;
+  font-weight: normal;
+}
+
+/* ヘッダーカバー画像
+------------------------------- */
+.cover {
+  background-size: cover;
+  background-position: center bottom;
+  height: 800px;
+}
+
+.sub-cover {
+  background-size: cover;
+  background-position: center bottom;
+  height: 528px;
+  margin-bottom: 4rem;
+}
+
+/* フッター
+------------------------------- */
+/* 背景 */
+.page-footer {
+  background: url(../images/footer-l.webp);
+  background-size: cover;
+  background-position: center;
+  padding-top: 12rem;
+}
+
+/* ボタン */
+.btn {
+  display: inline-block; /* 幅高さmargin paddingをちゃんと配置する */
+  font-size: 1.5rem;
+  background-color: #0bd;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  transition: 0.5s; /* 0.5秒かけて背景色を変化させる */
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #0090aa; /* transitionはbackground-colorにかかっている */
+  scale: 1.2; /*大きさ変化するアニメーション */
+  rotate: -5deg; /*回転するアニメーション */
+  translate: 10px; /*移動するアニメーション */
+}
+
+/* iframe */
+iframe {
+  width: 100%;
+}
+
+/* コンテンツ */
+.info {
+  width: 100%;
+  max-width: 544px;
+  margin: auto;
+  padding: 0 1.5rem;
+  border-spacing: 0;
+  /*border-spacing: 隣り合うセル同士の境界線（ボーダー）の間隔を指定するプロパティ */
+}
+.info th,
+.info td {
+  border-bottom: 1px solid #c9c2bc;
+}
+.info th {
+  text-align: left;
+  font-weight: normal;
+  padding: 1rem;
+}
+.info td {
+  padding: 1rem 0;
+}
+
+.ad {
+  display: none;
+}
+
+/* Cntact
+------------------------------- */
+.cover-contact {
+  background-image: url(../images/cover-contact-s.webp);
+}
+
+/* 店舗情報 */
+.location {
+  margin-bottom: 3.5rem;
+}
+.location-info {
+  margin-bottom: 2rem;
+}
+.location-info .info {
+  padding: 0;
+}
+
+/* お問い合わせ */
+.email {
+  max-width: 916px;
+  background-color: #faf7f0;
+  border-radius: 48px;
+  padding: 1.5rem 2.5rem;
+  margin: 0 auto 2rem;
+}
+.email p {
+  margin: 1rem 2rem;
+}
+
+/* SNS */
+.sns-youtube {
+  aspect-ratio: 16/9;
+}
+.sns-youtube iframe {
+  height: 100%;
+}
+/* コピーライト */
+.copyright {
+  background-color: #432;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 6rem;
+  color: #fff;
+}
+
+/* デスクトップ版
+------------------------------- */
+/* メディアクエリーは必ず一番下に書く！（ モバイルファーストなのでブレイクポイントはPC）*/
+@media (min-width: 800px) {
+  /* 見出し */
+  .page-title {
+    font-size: 5rem;
+  }
+  .heading-large {
+    font-size: 4rem;
+  }
+  .post-title {
+    font-size: 2rem;
+  }
+
+  /* ヘッダー */
+  .main-nav {
+    font-size: 2rem;
+  }
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    /* 両端に設置する設定 */
+    padding-top: 1.5rem;
+  }
+  .main-nav {
+    font-size: 2rem;
+  }
+
+  /* ヘッダー カバー画像*/
+  .sub-cover {
+    height: 400px;
+    margin-bottom: 6rem;
+  }
+
+  /*HOME */
+  .cover-home {
+    background-image: url(../images/cover-home-l.webp);
+  }
+  .about {
+    margin: 4rem auto 0;
+  }
+
+  /* NEWS*/
+  .cover-news {
+    background-image: url(../images/cover-news-l.webp);
+  }
+  .news-contents {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* メインとサイドバーの間の余白をとるために幅を設定↓ */
+  .post {
+    width: 60%;
+    order: 2;
+  }
+  .sidebar {
+    width: 22%;
+    order: 3; /*orderを指定すると番号順に並び変えできる*/
+  }
+  .ad {
+    order: 1;
+    display: block;
+  }
+  .sidebar .heading-medium {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .info th {
+    padding-left: 2.5rem;
+  }
+  /* MENU
+  ------------------------------- */
+  */ .cover-menu {
+    background-image: url(../images/cover-menu-l.webp);
+  }
+
+  .grid {
+    gap: 3rem 2rem; /*縦3　横2　余白開ける*/
+    grid-template-columns: repeat(3, 1fr); /*3つ並べる*/
+  }
+  .item img {
+    margin-bottom: 0.5rem;
+  }
+  .item p {
+    font-size: 1rem;
+  }
+  .item-big {
+    grid-column: 1/3; /*3つのうち一つだけ大きく見せる*/
+    grid-row: 1/3;
+  }
+  .item-big img {
+    /*画像の高さをそろえる*/
+    height: 94.5%;
+    width: 100%;
+  }
+  .marker-yellow {
+    /* 下から40%の位置に黄色の線を引き、残りの上60%は透明にする */
+    background: linear-gradient(transparent 60%, rgba(255, 255, 0, 0.6) 60%);
+  }
+
+  /* Cntact
+------------------------------- */
+  .cover-contact {
+    background-image: url(../images/cover-contact-l.webp);
+  }
+  .location {
+    display: flex;
+    gap: 2rem;
+  }
+  .location-info {
+    width: 32%;
+  }
+  .location-info .info th {
+    padding-left: 2rem;
+  }
+
+  .location-map {
+    width: 64%;
+  }
+  .email {
+    margin-bottom: 4rem;
+  }
+
+  .sns {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 0;
+  }
+  .sns-item {
+    flex: 1;
+    border: 1px solid #0090aa;
+  }
+
+  /* フッター
+  ------------------------------- */
+  .page-footer {
+    background-image: url(../images/footer-l.webp);
+    padding-top: 12rem;
+  }
+  .info th {
+    padding-left: 2.5rem;
+  }
+}
