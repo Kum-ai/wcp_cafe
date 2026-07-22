@@ -373,7 +373,8 @@ iframe {
   }
   /* MENU
   ------------------------------- */
-  */ .cover-menu {
+
+  .cover-menu {
     background-image: url(../images/cover-menu-l.webp);
   }
 
